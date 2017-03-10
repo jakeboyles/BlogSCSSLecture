@@ -1,0 +1,122 @@
+$blue:pink;
+
+body {
+	margin-top:30px;
+}
+
+.blog {
+	width:80%;
+	display:block;
+	margin:0px auto;
+	font-size:0px;
+	max-height:300px;
+
+	.fa , p {
+		font-size:15px;
+	}
+
+	.left,.middle,.right {
+		display:inline-block;
+		vertical-align: top;
+	}
+
+	.left {
+		width:20%;
+		text-align: right;
+		color:$blue;
+
+		h3 {
+			margin-bottom:0;
+		}
+
+		h2 {
+			margin-top:5px;
+		}
+	}
+
+	.middle {
+		width:10%;
+
+		.icon {
+			background-color:$blue;
+			width:50px;
+			height:50px;
+			border-radius: 50%;
+			border:5px solid darken($blue,15);
+			margin:0px auto;
+
+			i {
+				text-align: center;
+			    display: block;
+			    color: white;
+			    padding-top: 12px;
+			}
+		}
+
+		.line {
+			width:10px;
+			background-color:$blue;
+			height:250px;
+			margin:0px auto;
+		}
+	}
+
+	.right {
+		width:70%;
+		background-color:$blue;
+		border-radius:10px;
+		padding:20px;
+		color:white;
+		padding-top:10px;
+		position:relative;
+
+		.arrow {
+			width:20px;
+			height:20px;
+			background-color:$blue;
+			transform: rotate(45deg);
+			position:absolute;
+			top:50px;
+			left:-10px;
+		}
+
+		h2 {
+			border-bottom:3px solid white;
+			padding-bottom:18px;
+			margin-bottom:15px;
+		}
+	}
+}
+
+
+@for $i from 1 through 5 {
+    .blog#{$i} {
+    	overflow:hidden;
+		.right {
+			background-color:darken($blue,$i*5);
+
+			.arrow {
+				background-color:darken($blue,$i*5)
+			}
+		}
+
+		.middle {
+			.line {
+				background-color:darken($blue,$i*5);
+			}
+
+			.icon {
+				background-color:darken($blue,$i*5);
+				border:5px solid darken($blue,$i*5+15);
+
+			}
+		}
+
+		.left {
+			color:darken($blue,$i*5);
+		}
+
+    }
+}
+ 
+@import 'responsive';
