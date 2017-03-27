@@ -1,4 +1,4 @@
-$blue:pink;
+$color:pink;
 
 body {
 	margin-top:30px;
@@ -38,11 +38,11 @@ body {
 		width:10%;
 
 		.icon {
-			background-color:$blue;
+			background-color:$color;
 			width:50px;
 			height:50px;
 			border-radius: 50%;
-			border:5px solid darken($blue,15);
+			border:5px solid darken($color,15);
 			margin:0px auto;
 
 			i {
@@ -55,7 +55,7 @@ body {
 
 		.line {
 			width:10px;
-			background-color:$blue;
+			background-color:$color;
 			height:250px;
 			margin:0px auto;
 		}
@@ -63,7 +63,7 @@ body {
 
 	.right {
 		width:70%;
-		background-color:$blue;
+		background-color:$color;
 		border-radius:10px;
 		padding:20px;
 		color:white;
@@ -73,7 +73,7 @@ body {
 		.arrow {
 			width:20px;
 			height:20px;
-			background-color:$blue;
+			background-color:$color;
 			transform: rotate(45deg);
 			position:absolute;
 			top:50px;
@@ -93,27 +93,27 @@ body {
     .blog#{$i} {
     	overflow:hidden;
 		.right {
-			background-color:darken($blue,$i*5);
+			background-color:darken($color,$i*5);
 
 			.arrow {
-				background-color:darken($blue,$i*5)
+				background-color:darken($color,$i*5)
 			}
 		}
 
 		.middle {
 			.line {
-				background-color:darken($blue,$i*5);
+				background-color:darken($color,$i*5);
 			}
 
 			.icon {
-				background-color:darken($blue,$i*5);
-				border:5px solid darken($blue,$i*5+15);
+				background-color:darken($color,$i*5);
+				border:5px solid darken($color,$i*5+15);
 
 			}
 		}
 
 		.left {
-			color:darken($blue,$i*5);
+			color:darken($color,$i*5);
 		}
 
     }
